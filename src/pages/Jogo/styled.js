@@ -40,6 +40,8 @@ border: solid 1px red;
     height: 20%;
     max-width: 400px;
     border: solid 2px red;
+    position: absolute;
+    top: 10px;
 }
 .msg{
     width: 90%;
