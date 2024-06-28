@@ -7,15 +7,14 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-border: solid 1px red;
+
 
 #container{
     width: 100%;
     height: 100%;
     background-color: ${azul};
     position: relative;
-    border: solid 2px orange;
-  
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,8 +30,8 @@ border: solid 1px red;
     align-items: center;
     justify-content: center; 
     gap: 15px;
-    border: solid 2px red;
-    margin-top: 70px;
+   
+    margin-top: 100px;
     
 }
 
@@ -40,7 +39,7 @@ border: solid 1px red;
     width: 90%;
     height: 20%;
     max-width: 400px;
-    border: solid 2px red;
+  
     position: absolute;
     top: 10px;
 }
@@ -48,14 +47,16 @@ border: solid 1px red;
     width: 90%;
     height: 20%;
     max-width: 400px;
-    border: solid 2px red;
+    margin-top: 50px;
+  
     
 }
 .espaco{
     width: 90%;
     height: 20%;
     height: 150px;
-    border: solid 2px red;
+    margin-top: 50px;
+  
 }
 
 
