@@ -32,6 +32,7 @@ border: solid 1px red;
     justify-content: center; 
     gap: 15px;
     border: solid 2px red;
+    margin-top: 70px;
     
 }
 
