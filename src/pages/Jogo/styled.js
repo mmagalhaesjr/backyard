@@ -10,7 +10,7 @@ justify-content: center;
 
 
 #container{
-    width: 600px;
+    width: 100%;
     height: 100vh;
     background-color: #035d02;
     position: relative;
@@ -22,7 +22,8 @@ justify-content: center;
 }
 
 .titulo{
-    width: 500px;
+    width: 90%;
+    max-width: 400px;
     position: absolute;
     top: 50px;
 }
