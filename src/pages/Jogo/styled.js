@@ -12,16 +12,14 @@ justify-content: center;
 #container{
     width: 100%;
     height: 100vh;
-    overflow: auto;
     background-color: ${azul};
     position: relative;
+    border: solid 2px black;
   
-   
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 #player{
