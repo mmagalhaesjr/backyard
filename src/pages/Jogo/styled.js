@@ -4,6 +4,7 @@ import { azul, branco, cinza } from '../../Constants/cores';
 export const StyledJogo  = styled.section`
 width: 100%;
 height: 100vh;
+background-color: ${azul};
 
 display: flex;
 align-items: center;
@@ -12,7 +13,7 @@ justify-content: center;
 
 #container{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-color: ${azul};
     position: relative;
 
