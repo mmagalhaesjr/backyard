@@ -14,19 +14,17 @@ import vamosFugir  from '../../assets/musicas/mp3/vamosFugir.mp3'
 
 export const ListaMusicas = [
     {nome:"Lift Me Up", musica:RihannaLiftMeUp},
-    {nome:"Billionaire", musica:BrunoMarsBillionaire},
+    {nome:"To bem", musica:JovemDionísiotobem},
+    {nome:"Baba baby", musica:kellykeybabababy},
     {nome:"New Rules", musica:DuaLipaNewRules},
+    {nome:"Vamos fugir", musica:vamosFugir},
     {nome:"Bellyache", musica:BillieEilishBellyache},
-    {nome:"Dynamite", musica:BTSDynamite},
     {nome:"Butter", musica:BTSButter},
     {nome:"Break My Heart", musica:DuaLipaBreakMyHeart},
     {nome:"galopeira", musica:galopeira},
     {nome:"Facíl", musica:FácilJotaQuest},
-    {nome:"To bem", musica:JovemDionísiotobem},
-    {nome:"Baba baby", musica:kellykeybabababy},
+    {nome:"Dynamite", musica:BTSDynamite},
+    {nome:"Billionaire", musica:BrunoMarsBillionaire},
     {nome:"Erva Venenosa", musica:ritaleeervavenenosa},
-    {nome:"Vamos fugir", musica:vamosFugir},
-
-
 ]
 
