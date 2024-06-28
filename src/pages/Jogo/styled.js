@@ -38,6 +38,7 @@ justify-content: center;
 }
 .msg{
     width: 90%;
+    margin-top: 3%;
     margin-bottom: 5%
 }
 .espaco{
