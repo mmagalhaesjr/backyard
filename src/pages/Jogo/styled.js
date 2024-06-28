@@ -24,11 +24,12 @@ justify-content: center;
 
 }
 #player{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    gap: 10px;
+    gap: 15px;
     
 }
 
@@ -66,10 +67,19 @@ justify-content: center;
                 0 0 100px #00c4ff; 
     }
 }
+form{
+    width:100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 input{
-    width: 60%;
-    min-width: 400px;
+    width:95%;
+    max-width: 500px;
     height: 50px;
     border-radius: 30px;
     margin-top: 10px;
@@ -81,6 +91,7 @@ input{
     border-right:none;
     border-bottom:2px solid ${cinza};
     font-size: 1rem;
+   
 
     &:hover{
         background-color: #ffffff;
