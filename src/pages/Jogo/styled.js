@@ -30,8 +30,6 @@ justify-content: center;
     align-items: center;
     justify-content: center; 
     gap: 15px;
-    margin-top: 5%;
-    margin-bottom: 5%;
     border: solid 2px red;
     
 }
