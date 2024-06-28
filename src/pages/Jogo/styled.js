@@ -144,10 +144,12 @@ form{
 }
 
 audio {
-  width: 90%;
+    width:95%;
+    max-width: 500px;
 }
 
 audio::-webkit-media-controls-panel {
+   
   background-color: ${cinza}; 
   padding: 10px; 
 }
