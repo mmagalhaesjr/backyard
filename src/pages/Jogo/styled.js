@@ -28,10 +28,10 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    gap: 15px;
+    justify-content: space-evenly; 
+    
    
-    margin-top: 100px;
+    
     
 }
 
@@ -39,16 +39,11 @@ justify-content: center;
     width: 90%;
     height: 20%;
     max-width: 400px;
-  
-    position: absolute;
-    top: 10px;
 }
 .msg{
     width: 90%;
     height: 20%;
     max-width: 400px;
-    margin-top: 50px;
-  
     
 }
 .espaco{
