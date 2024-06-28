@@ -83,7 +83,7 @@ export default function Jogo() {
                     </form>
                 </div>
 
-                {resultado === "sim" ? <img className="msg" src={ganhou} alt="img" /> : resultado === "nao" ? <img className="msg" src={perdeu} alt="img" /> : null}
+                {resultado === "sim" ? <img className="msg" src={ganhou} alt="img" /> : resultado === "nao" ? <img className="msg" src={perdeu} alt="img" /> : <div className="espaco"> </div> }
             </div>
         </StyledJogo>
     );

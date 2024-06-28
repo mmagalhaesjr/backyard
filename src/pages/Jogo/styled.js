@@ -10,12 +10,12 @@ display: flex;
 align-items: center;
 justify-content: center;
 
-
 #container{
     width: 100%;
     height: 90vh;
     background-color: ${azul};
     position: relative;
+    
 
     display: flex;
     flex-direction: column;
@@ -38,6 +38,10 @@ justify-content: center;
 }
 .msg{
     width: 90%;
+}
+.espaco{
+    width: 90%;
+    height: 20%;
 }
 
 
