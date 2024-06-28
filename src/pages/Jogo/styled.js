@@ -14,12 +14,12 @@ justify-content: center;
     height: 100vh;
     background-color: ${azul};
     position: relative;
-    border: solid 2px black;
+    border: solid 2px orange;
   
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
 }
 #player{
