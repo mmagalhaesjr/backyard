@@ -21,8 +21,6 @@ const GlobalStyle = createGlobalStyle`
         font: inherit;
         vertical-align: baseline;
         color: #000000;
-       
-       
     }
   
     html{
@@ -36,19 +34,6 @@ const GlobalStyle = createGlobalStyle`
         display: block;
     }
 
-/* @font-face {
-    font-family: 'marjorieMediu';
-    src: url('fonts/NeueHaasDisplayMediu.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'marjorieLigth';
-    src: url('fonts/NeueHaasDisplayLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 
 
@@ -56,13 +41,12 @@ const GlobalStyle = createGlobalStyle`
         background-color: #ffffff;
         line-height: 1;
         width: 100%;
+        height: 100vh;
        
         font-optical-sizing: auto;
         overflow: hidden;
 
-        /* font-family: "marjorieMediu", sans-serif;
-        font-weight: normal;
-        font-style: normal; */
+        
 
         font-family: "Hanken Grotesk", sans-serif;
         
