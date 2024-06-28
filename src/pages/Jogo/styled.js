@@ -11,7 +11,7 @@ border: solid 1px red;
 
 #container{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: ${azul};
     position: relative;
     border: solid 2px orange;
