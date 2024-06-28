@@ -54,31 +54,34 @@ export default function Jogo() {
     return (
         <StyledJogo>
             <div id="container">
+
                 <img className="titulo" src={titulo} alt="img" />
 
-                <button className="play" onClick={tocarMusicaAleatoria}>GERAR MÚSICA</button>
+                <div id="player">
+                    <button className="play" onClick={tocarMusicaAleatoria}>GERAR MÚSICA</button>
 
-                {musicaAtual && (
-                    <audio controls>
-                        <source src={musicaAtual.musica} type="audio/mpeg" />
-                        Audio não suportado pelo navegador
-                    </audio>
-                )}
+                    {musicaAtual && (
+                        <audio controls>
+                            <source src={musicaAtual.musica} type="audio/mpeg" />
+                            Audio não suportado pelo navegador
+                        </audio>
+                    )}
 
-                <form onSubmit={handleSubmit}>
-                    <input
-                        onChange={handleInputChange}
-                        value={valorInput}
-                        type="text"
-                        placeholder="Digite o nome da música..."
-                    />
-                    <div className="cxBotao">
-                        <button type="submit" className="enviar">Enviar</button>
-                        <button onClick={reiniciarPagina} className="enviar">Reiniciar</button>
-                    </div>
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            onChange={handleInputChange}
+                            value={valorInput}
+                            type="text"
+                            placeholder="Digite o nome da música..."
+                        />
+                        <div className="cxBotao">
+                            <button type="submit" className="enviar">Enviar</button>
+                            <button onClick={reiniciarPagina} className="enviar">Reiniciar</button>
+                        </div>
 
 
-                </form>
+                    </form>
+                </div>
 
                 {resultado === "sim" ? <img className="msg" src={ganhou} alt="img" /> : resultado === "nao" ? <img className="msg" src={perdeu} alt="img" /> : null}
             </div>
