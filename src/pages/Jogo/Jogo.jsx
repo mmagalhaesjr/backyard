@@ -5,6 +5,7 @@ import { ListaMusicas } from "../../Components/Listas/musicas";
 import titulo from "../../assets/musicas/titulo.png";
 import ganhou from '../../assets/musicas/ganhou.png';
 import perdeu from '../../assets/musicas/perdeu.png';
+import confete from '../../assets/musicas/confete.gif';
 
 // Função para normalizar strings: remover acentos, pontuação e converter para minúsculas
 const normalizeString = (str) => {
@@ -25,7 +26,7 @@ export default function Jogo() {
     const tocarMusicaAleatoria = () => {
         const musicaAleatoria = Math.floor(Math.random() * ListaMusicas.length);
         setMusicaAtual(ListaMusicas[musicaAleatoria]);
-        setBotaoDesativado(true); 
+        setBotaoDesativado(true);
         console.log(ListaMusicas[musicaAleatoria].nome);
     };
 
@@ -55,14 +56,13 @@ export default function Jogo() {
     return (
         <StyledJogo>
             <div id="container">
-
                 <img className="titulo" src={titulo} alt="img" />
 
                 <div id="player">
-                    <button 
-                        className="play" 
-                        onClick={tocarMusicaAleatoria} 
-                        disabled={botaoDesativado} 
+                    <button
+                        className="play"
+                        onClick={tocarMusicaAleatoria}
+                        disabled={botaoDesativado}
                     >
                         GERAR MÚSICA
                     </button>
@@ -85,12 +85,19 @@ export default function Jogo() {
                             <button type="submit" className="enviar">Enviar</button>
                             <button onClick={reiniciarPagina} className="enviar">Reiniciar</button>
                         </div>
-
-
                     </form>
                 </div>
 
-                {resultado === "sim" ? <img className="msg" src={ganhou} alt="img" /> : resultado === "nao" ? <img className="msg" src={perdeu} alt="img" /> : <div className="espaco"> </div> }
+                {resultado === "sim" ? (
+                    <>
+                        <img className="msg" src={ganhou} alt="img" />
+                        <img className="confete" src={confete} alt="gif" style={{ display: 'block' }} />
+                    </>
+                ) : resultado === "nao" ? (
+                    <img className="msg" src={perdeu} alt="img" />
+                ) : (
+                    <div className="espaco"> </div>
+                )}
             </div>
         </StyledJogo>
     );
