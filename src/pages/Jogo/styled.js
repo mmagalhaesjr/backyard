@@ -12,7 +12,7 @@ justify-content: center;
 
 #container{
     width: 100%;
-    height: 90%;
+    height: 80%;
     background-color: ${azul};
     position: relative;
    
@@ -38,6 +38,7 @@ justify-content: center;
 }
 .msg{
     width: 90%;
+    margin-bottom: 20px;
 }
 .espaco{
     width: 90%;
