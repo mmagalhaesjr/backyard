@@ -12,7 +12,7 @@ justify-content: center;
 
 #container{
     width: 100%;
-    height: 80%;
+    height: 100%;
     background-color: ${azul};
     position: relative;
    
@@ -20,7 +20,7 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 #player{
@@ -39,10 +39,12 @@ justify-content: center;
 .titulo{
     width: 90%;
     max-width: 400px;
+    border: solid 2px red;
 }
 .msg{
     width: 90%;
     max-width: 400px;
+    border: solid 2px red;
     
 }
 .espaco{
