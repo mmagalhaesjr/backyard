@@ -34,25 +34,12 @@ const GlobalStyle = createGlobalStyle`
         display: block;
     }
 
-
-
-
     body {
         background-color: #ffffff;
-        line-height: 1;
-        width: 100%;
-        height: 100vh;
-       
-        font-optical-sizing: auto;
-        overflow: hidden;
-
-        
-
         font-family: "Hanken Grotesk", sans-serif;
         
 }
 
-    
     /* ol, ul {
         list-style: none;
     } */
