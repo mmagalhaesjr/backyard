@@ -11,7 +11,7 @@ border: solid 1px red;
 
 #container{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: ${azul};
     position: relative;
     border: solid 2px orange;
@@ -19,7 +19,8 @@ border: solid 1px red;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
 
 }
 #player{
