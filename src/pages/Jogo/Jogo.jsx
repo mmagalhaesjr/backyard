@@ -20,11 +20,13 @@ export default function Jogo() {
     const [musicaAtual, setMusicaAtual] = useState(null);
     const [valorInput, setValorInput] = useState("");
     const [resultado, setResultado] = useState(null);
+    const [botaoDesativado, setBotaoDesativado] = useState(false);
 
     const tocarMusicaAleatoria = () => {
         const musicaAleatoria = Math.floor(Math.random() * ListaMusicas.length);
         setMusicaAtual(ListaMusicas[musicaAleatoria]);
-        console.log(ListaMusicas[musicaAleatoria]);
+        setBotaoDesativado(true); 
+        console.log(ListaMusicas[musicaAleatoria].nome);
     };
 
     const handleInputChange = (event) => {
@@ -33,7 +35,6 @@ export default function Jogo() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Nome da música enviada:", valorInput);
 
         const normalizedInput = normalizeString(valorInput);
         const normalizedMusicaAtual = normalizeString(musicaAtual.nome);
@@ -58,7 +59,13 @@ export default function Jogo() {
                 <img className="titulo" src={titulo} alt="img" />
 
                 <div id="player">
-                    <button className="play" onClick={tocarMusicaAleatoria}>GERAR MÚSICA</button>
+                    <button 
+                        className="play" 
+                        onClick={tocarMusicaAleatoria} 
+                        disabled={botaoDesativado} 
+                    >
+                        GERAR MÚSICA
+                    </button>
 
                     {musicaAtual && (
                         <audio controls>
