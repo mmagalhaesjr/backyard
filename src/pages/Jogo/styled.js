@@ -12,8 +12,10 @@ justify-content: center;
 #container{
     width: 100%;
     height: 100vh;
+    overflow: auto;
     background-color: ${azul};
     position: relative;
+  
    
 
     display: flex;
