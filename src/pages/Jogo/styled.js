@@ -3,11 +3,11 @@ import { azul, branco, cinza } from '../../Constants/cores';
 
 export const StyledJogo  = styled.section`
 width: 100%;
-
-
+height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
+border: solid 1px red;
 
 #container{
     width: 100%;
@@ -24,6 +24,7 @@ justify-content: center;
 }
 #player{
     width: 100%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,11 +36,13 @@ justify-content: center;
 
 .titulo{
     width: 90%;
+    height: 20%;
     max-width: 400px;
     border: solid 2px red;
 }
 .msg{
     width: 90%;
+    height: 20%;
     max-width: 400px;
     border: solid 2px red;
     
@@ -47,6 +50,8 @@ justify-content: center;
 .espaco{
     width: 90%;
     height: 20%;
+    height: 150px;
+    border: solid 2px red;
 }
 
 
