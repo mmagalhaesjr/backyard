@@ -38,7 +38,7 @@ justify-content: center;
 }
 .msg{
     width: 90%;
-    margin-bottom: 10px;
+    margin-bottom: 5%
 }
 .espaco{
     width: 90%;
