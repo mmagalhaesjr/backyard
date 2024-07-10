@@ -1,9 +1,7 @@
-import RihannaLiftMeUp from '../../assets/musicas/mp3/RihannaLiftMeUp.mp3'
-import BillieEilishBellyache from '../../assets/musicas/mp3/BillieEilishBellyache.mp3'
-import BrunoMarsBillionaire from '../../assets/musicas/mp3/BrunoMarsBillionaire.mp3'
+
 import DuaLipaNewRules from '../../assets/musicas/mp3/DuaLipaNewRules.mp3'
 import BTSDynamite from '../../assets/musicas/mp3/BTSDynamite.mp3'
-import DuaLipaBreakMyHeart from '../../assets/musicas/mp3/DuaLipaBreakMyHeart.mp3'
+
 import BTSButter from '../../assets/musicas/mp3/BTSButter.mp3'
 import galopeira from '../../assets/musicas/mp3/ChitãozinhoXororóGalopeira.mp3'
 import FácilJotaQuest from '../../assets/musicas/mp3/FácilJotaQuest.mp3'
