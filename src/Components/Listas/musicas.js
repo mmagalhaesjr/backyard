@@ -16,11 +16,11 @@ export const ListaMusicas = [
     {id:3, nome:"Baba baby", musica:kellykeybabababy},
     {id:4, nome:"New Rules", musica:DuaLipaNewRules},
     {id:5, nome:"Vamos fugir", musica:vamosFugir},
-    {id:6, nome:"Erva Venenosa", musica:ritaleeervavenenosa},
+    {id:6, nome:"Facíl", musica:FácilJotaQuest},
     {id:7, nome:"Butter", musica:BTSButter},
     {id:8, nome:"Dynamite", musica:BTSDynamite},
     {id:9, nome:"galopeira", musica:galopeira},
-    {id:10, nome:"Facíl", musica:FácilJotaQuest},
+   
    
    
 ]

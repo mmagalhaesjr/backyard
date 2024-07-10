@@ -20,7 +20,7 @@ export const StyledJogo2 = styled.section`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border: solid 5px #ffffff;
+    overflow: hidden;
     
   }
 
