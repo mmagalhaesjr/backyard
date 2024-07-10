@@ -20,15 +20,11 @@ export const StyledJogo2 = styled.section`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border: solid 3px blue;
     
   }
 
-  .confete {
-    position: absolute;
-    top: 0;
-    display: none;
-  }
+
+
 
   #player {
     width: 100%;
@@ -37,7 +33,7 @@ export const StyledJogo2 = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid 3px red;
+
   }
 
   .titulo,
@@ -54,25 +50,7 @@ export const StyledJogo2 = styled.section`
     margin-top: 50px;
   }
 
-  .play {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0px 10px 14px -7px #000000;
-    border: none;
-    background-color: ${cinza};
-    font-size: 1rem;
-    font-weight: 700;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    &:hover {
-      background-color: #ffffff;
-      box-shadow: 0 0 20px #00c4ff, 
-                  0 0 40px #00c4ff, 
-                  0 0 80px #00c4ff, 
-                  0 0 100px #00c4ff;
-    }
-  }
+ 
 
   form {
     width: 100%;
@@ -91,22 +69,22 @@ export const StyledJogo2 = styled.section`
     margin-top: 10px;
     outline: none;
     padding-left: 5px;
-    background-color: ${cinza};
-    border: none;
+    background-color: #000000;
+    outline: none;
     border-bottom: 2px solid ${cinza};
     font-size: 1rem;
     transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
-    &:hover {
-      background-color: #ffffff;
-      border: 2px solid #ffffff;
-      box-shadow: 0 0 20px #00c4ff, 
-                  0 0 40px #00c4ff, 
-                  0 0 80px #00c4ff, 
-                  0 0 100px #00c4ff;
-    }
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px #00c4ff, 
+                  0 0 10px #00c4ff, 
+                  0 0 10px #00c4ff, 
+                  0 0 40px #00c4ff;
+    color:#ffffff;
+   
     &::placeholder {
-      color: #000000;
+      color: #ffffff;
       text-align: center;
+    
     }
   }
 
@@ -124,10 +102,10 @@ export const StyledJogo2 = styled.section`
     transition: background-color 0.3s, box-shadow 0.3s;
     &:hover {
       background-color: ${branco};
-      box-shadow: 0 0 20px #00c4ff, 
-                  0 0 40px #00c4ff, 
-                  0 0 80px #00c4ff, 
-                  0 0 100px #00c4ff;
+      box-shadow: 0 0 10px #00c4ff, 
+                  0 0 10px #00c4ff, 
+                  0 0 10px #00c4ff, 
+                  0 0 40px #00c4ff;
     }
   }
 
@@ -139,24 +117,62 @@ export const StyledJogo2 = styled.section`
     z-index: 10;
   }
 
-  audio {
-    width: 95%;
-    max-width: 500px;
+  .confete {
+    position: absolute;
+    top: 0;
+    display: none;
   }
 
-  audio::-webkit-media-controls-panel {
-    background-color: ${cinza};
-    padding: 10px;
+
+  audio{
+      border-radius: 100px;
+      background-color: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 10px #00c4ff, 
+                  0 0 10px #00c4ff, 
+                  0 0 10px #00c4ff, 
+                  0 0 40px #00c4ff;
   }
 
-  audio::-webkit-media-controls-play-button,
-  audio::-webkit-media-controls-volume-slider {
-    color: #000000;
-  }
 
+audio::-webkit-media-controls-panel {
+  background-color: #000000; /* Cor de fundo do painel */
+  border-radius: 15px; /* Arredondar os cantos do painel */
+
+}
+/* Estilizando a barra de progresso */
+audio::-webkit-media-controls-timeline {
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin: 10px;
+}
+/* Estilizando a barra de volume */
+audio::-webkit-media-controls-volume-slider {
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-radius: 100px;
+}
+
+  audio::-webkit-media-controls-play-button{
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
   audio::-webkit-media-controls-current-time-display,
   audio::-webkit-media-controls-time-remaining-display {
-    color: #000000;
+    color: #ffffff;
   }
+
+  audio::-webkit-media-controls-mute-button,
+  audio::-webkit-media-controls-volume-slider-container {
+    background-color: #ffffff; /* Change the background color of mute button and volume slider */
+    border-radius:50%;
+   
+}
+
+
+
+  
 `;
 
