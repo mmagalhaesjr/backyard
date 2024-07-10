@@ -8,7 +8,7 @@ import perdeu from '../../assets/musicas/perdeu.png';
 import confete from '../../assets/musicas/confete.gif';
 
 // Função para normalizar strings: remover acentos, pontuação e converter para minúsculas
-const normalizeString = (str) => {
+const padraoString = (str) => {
     return str
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
@@ -27,26 +27,28 @@ export default function Jogo() {
         const musicaAleatoria = Math.floor(Math.random() * ListaMusicas.length);
         setMusicaAtual(ListaMusicas[musicaAleatoria]);
         setBotaoDesativado(true);
+
+        console.log(ListaMusicas[musicaAleatoria].id);
         console.log(ListaMusicas[musicaAleatoria].nome);
     };
 
-    const handleInputChange = (event) => {
+    const pegarNomeMusica = (event) => {
         setValorInput(event.target.value);
     };
 
-    const handleSubmit = (event) => {
+    const enviar = (event) => {
         event.preventDefault();
 
-        const normalizedInput = normalizeString(valorInput);
-        const normalizedMusicaAtual = normalizeString(musicaAtual.nome);
+        const nomeMusicaInput = padraoString(valorInput);
+        const nomeMusicaLista = padraoString(musicaAtual.nome);
 
-        if (normalizedMusicaAtual === normalizedInput) {
+        if (nomeMusicaLista === nomeMusicaInput) {
             setResultado("sim");
         } else {
             setResultado("nao");
         }
 
-        setValorInput("");
+        // setValorInput("");
     };
 
     const reiniciarPagina = () => {
@@ -74,9 +76,9 @@ export default function Jogo() {
                         </audio>
                     )}
 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={enviar}>
                         <input
-                            onChange={handleInputChange}
+                            onChange={pegarNomeMusica}
                             value={valorInput}
                             type="text"
                             placeholder="Digite o nome da música..."

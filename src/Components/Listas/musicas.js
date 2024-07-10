@@ -13,18 +13,18 @@ import ritaleeervavenenosa  from '../../assets/musicas/mp3/ritaleeervavenenosa.m
 import vamosFugir  from '../../assets/musicas/mp3/vamosFugir.mp3'
 
 export const ListaMusicas = [
-    {nome:"Lift Me Up", musica:RihannaLiftMeUp},
-    {nome:"To bem", musica:JovemDionísiotobem},
-    {nome:"Baba baby", musica:kellykeybabababy},
-    {nome:"New Rules", musica:DuaLipaNewRules},
-    {nome:"Vamos fugir", musica:vamosFugir},
-    {nome:"Bellyache", musica:BillieEilishBellyache},
-    {nome:"Butter", musica:BTSButter},
-    {nome:"Break My Heart", musica:DuaLipaBreakMyHeart},
-    {nome:"galopeira", musica:galopeira},
-    {nome:"Facíl", musica:FácilJotaQuest},
-    {nome:"Dynamite", musica:BTSDynamite},
-    {nome:"Billionaire", musica:BrunoMarsBillionaire},
-    {nome:"Erva Venenosa", musica:ritaleeervavenenosa},
+    {id:1, nome:"Lift Me Up", musica:RihannaLiftMeUp},
+    {id:2, nome:"To bem", musica:JovemDionísiotobem},
+    {id:3, nome:"Baba baby", musica:kellykeybabababy},
+    {id:4, nome:"New Rules", musica:DuaLipaNewRules},
+    {id:5, nome:"Vamos fugir", musica:vamosFugir},
+    {id:6, nome:"Bellyache", musica:BillieEilishBellyache},
+    {id:7, nome:"Butter", musica:BTSButter},
+    {id:8, nome:"Break My Heart", musica:DuaLipaBreakMyHeart},
+    {id:9, nome:"galopeira", musica:galopeira},
+    {id:10, nome:"Facíl", musica:FácilJotaQuest},
+    {id:11, nome:"Dynamite", musica:BTSDynamite},
+    {id:12, nome:"Billionaire", musica:BrunoMarsBillionaire},
+    {id:13, nome:"Erva Venenosa", musica:ritaleeervavenenosa},
 ]
 
