@@ -2,7 +2,7 @@ import { StyledJogo2 } from "./styled";
 
 
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ListaMusicas } from "../../Components/Listas/musicas";
 import { useParams } from "react-router-dom";
 
@@ -11,8 +11,8 @@ import ganhou from '../../assets/musicas/ganhou.png';
 import perdeu from '../../assets/musicas/perdeu.png';
 import confete from '../../assets/musicas/confete.gif';
 
-
-
+import { CiPlay1 } from "react-icons/ci";
+import { CiPause1 } from "react-icons/ci";
 
 
 // Função para normalizar strings: remover acentos, pontuação e converter para minúsculas
@@ -31,37 +31,54 @@ export default function Jogo2() {
     const { musicaId } = useParams();
     const [musicainput, setMusicainput] = useState('')
     const [musicaIgual, setMusicaIgual] = useState(null);
-  
+
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
 
-    function pegarValorinput(event){
+
+    function pegarValorinput(event) {
         setMusicainput(event.target.value);
     }
 
 
     let musicaSelecionada = ListaMusicas.find(obj => (
         obj.id == Number(musicaId)
-       
-    ))
-    
 
-    function verificaNomesMusica(event){
+    ))
+
+
+    function verificaNomesMusica(event) {
 
         event.preventDefault();
 
         let nomeInput = padraoString(musicainput)
         let nomeMusicaLista = padraoString(musicaSelecionada.nome)
 
-        if(nomeInput === nomeMusicaLista){
+        if (nomeInput === nomeMusicaLista) {
             setMusicaIgual('sim')
-        }else{
+        } else {
             setMusicaIgual('nao')
         }
     }
 
+   
+
+
+    const togglePlayPause = () => {
+        if (isPlaying) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.play();
+        }
+        setIsPlaying(!isPlaying);
+    };
+
+
     const reiniciarPagina = () => {
         window.location.reload();
     };
+
 
 
 
@@ -70,12 +87,20 @@ export default function Jogo2() {
             <div id="container">
                 <img className="titulo" src={titulo} alt="img" />
 
-                <div id="player">
+                <div id="cxPlayer">
 
-                    <audio controls >
-                        <source src={musicaSelecionada.musica} type="audio/mpeg" />
-                        Audio não suportado pelo
-                    </audio>
+                    {/* <audio controls >
+                            <source src={musicaSelecionada.musica} type="audio/mpeg" />
+                            Audio não suportado pelo
+                        </audio> */}
+
+                    <div className="musica" onClick={togglePlayPause}>
+                    
+                        <audio ref={audioRef} src={musicaSelecionada.musica} />
+
+                        {isPlaying ? <CiPause1 className="pause" /> : <CiPlay1 className="play" />}
+                        
+                    </div>
 
                     <form >
 
@@ -83,7 +108,7 @@ export default function Jogo2() {
 
                         <div className="cxBotao">
                             <button onClick={verificaNomesMusica} type="submit" className="enviar">Enviar</button>
-                            <button onClick={reiniciarPagina}className="enviar">Reiniciar</button>
+                            <button onClick={reiniciarPagina} className="enviar">Reiniciar</button>
                         </div>
 
                     </form>

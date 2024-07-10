@@ -24,10 +24,7 @@ export const StyledJogo2 = styled.section`
     
   }
 
-
-
-
-  #player {
+  #cxPlayer {
     width: 100%;
     height: 40%;
     display: flex;
@@ -36,6 +33,21 @@ export const StyledJogo2 = styled.section`
     justify-content: center;
 
   }
+  .musica{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 10px #00c4ff,   0 0 40px #00c4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .play,.pause{
+    color: #ffffff;
+    font-size: 3rem;
+  }
+  
 
   .titulo,
   .msg {
@@ -76,10 +88,7 @@ export const StyledJogo2 = styled.section`
     font-size: 1rem;
     transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
     border: 2px solid #ffffff;
-    box-shadow: 0 0 10px #00c4ff, 
-                  0 0 10px #00c4ff, 
-                  0 0 10px #00c4ff, 
-                  0 0 40px #00c4ff;
+    box-shadow: 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 10px #00c4ff,   0 0 40px #00c4ff;
     color:#ffffff;
    
     &::placeholder {
@@ -125,52 +134,7 @@ export const StyledJogo2 = styled.section`
   }
 
 
-  audio{
-      border-radius: 100px;
-      background-color: #ffffff;
-      border: 2px solid #ffffff;
-      box-shadow: 0 0 10px #00c4ff, 
-                  0 0 10px #00c4ff, 
-                  0 0 10px #00c4ff, 
-                  0 0 40px #00c4ff;
-  }
 
-
-audio::-webkit-media-controls-panel {
-  background-color: #000000; /* Cor de fundo do painel */
-  border-radius: 15px; /* Arredondar os cantos do painel */
-
-}
-/* Estilizando a barra de progresso */
-audio::-webkit-media-controls-timeline {
-  height: 5px;
-  background-color: #ffffff;
-  border-radius: 100px;
-  margin: 10px;
-}
-/* Estilizando a barra de volume */
-audio::-webkit-media-controls-volume-slider {
-  height: 5px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  border-radius: 100px;
-}
-
-  audio::-webkit-media-controls-play-button{
-    background-color: #ffffff;
-    border-radius: 50%;
-  }
-  audio::-webkit-media-controls-current-time-display,
-  audio::-webkit-media-controls-time-remaining-display {
-    color: #ffffff;
-  }
-
-  audio::-webkit-media-controls-mute-button,
-  audio::-webkit-media-controls-volume-slider-container {
-    background-color: #ffffff; /* Change the background color of mute button and volume slider */
-    border-radius:50%;
-   
-}
 
 
 
