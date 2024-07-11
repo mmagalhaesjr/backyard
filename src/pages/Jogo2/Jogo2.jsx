@@ -56,9 +56,9 @@ export default function Jogo2() {
         let nomeMusicaLista = padraoString(musicaSelecionada.nome)
 
         if (nomeInput === nomeMusicaLista) {
-            setMusicaIgual('sim')
+            setMusicaIgual(true)
         } else {
-            setMusicaIgual('nao')
+            setMusicaIgual(false)
         }
     }
 
@@ -83,7 +83,7 @@ export default function Jogo2() {
 
 
     return (
-        <StyledJogo2>
+        <StyledJogo2 musicaIgual={musicaIgual}>
             <div id="container">
                 <img className="titulo" src={titulo} alt="img" />
 
@@ -114,12 +114,12 @@ export default function Jogo2() {
                     </form>
 
                 </div>
-                {musicaIgual === "sim" ? (
+                {musicaIgual === true ? (
                     <>
                         <img className="msg" src={ganhou} alt="img" />
                         <img className="confete" src={confete} alt="gif" style={{ display: 'block' }} />
                     </>
-                ) : musicaIgual === "nao" ? (
+                ) : musicaIgual === false ? (
                     <img className="msg" src={perdeu} alt="img" />
                 ) : (
                     <div className="espaco"> </div>

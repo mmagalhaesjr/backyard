@@ -37,8 +37,17 @@ export const StyledJogo2 = styled.section`
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 10px #00c4ff,   0 0 40px #00c4ff;
+    
+    border: solid 2px ${props => 
+    props.musicaIgual === true ? '#33ff00' :
+    props.musicaIgual === false ? '#ff0000' :
+    '#ffffff'};
+ 
+    box-shadow: ${props => 
+    props.musicaIgual === true ? '0 0 40px #33ff00' : 
+    props.musicaIgual === false ? '0 0 40px #ff0000' :
+    '0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 40px #00c4ff'};
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,11 +93,21 @@ export const StyledJogo2 = styled.section`
     padding-left: 5px;
     background-color: #000000;
     outline: none;
-    border-bottom: 2px solid ${cinza};
     font-size: 1rem;
+
+    border: solid 2px ${props => 
+    props.musicaIgual === true ? '#33ff00' :
+    props.musicaIgual === false ? '#ff0000' :
+    '#ffffff'};
+ 
+    box-shadow: ${props => 
+    props.musicaIgual === true ? '0 0 40px #33ff00' : 
+    props.musicaIgual === false ? '0 0 40px #ff0000' :
+      '0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 40px #00c4ff'};
+
     transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 10px #00c4ff,   0 0 40px #00c4ff;
+    
+
     color:#ffffff;
    
     &::placeholder {
@@ -112,10 +131,7 @@ export const StyledJogo2 = styled.section`
     transition: background-color 0.3s, box-shadow 0.3s;
     &:hover {
       background-color: ${branco};
-      box-shadow: 0 0 10px #00c4ff, 
-                  0 0 10px #00c4ff, 
-                  0 0 10px #00c4ff, 
-                  0 0 40px #00c4ff;
+      box-shadow: 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 10px #00c4ff, 0 0 40px #00c4ff;
     }
   }
 
