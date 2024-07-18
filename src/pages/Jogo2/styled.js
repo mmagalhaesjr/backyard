@@ -70,23 +70,19 @@ export const StyledJogo2 = styled.section`
   
 
   .titulo,
-  .msg {
+  .msg,
+  .espaco  {
     width: 90%;
     height: 400px;
     max-width: 500px;
-  }
 
-  .espaco {
-    width: 90%;
-    height: 20%;
-    height: 150px;
-    margin-top: 50px;
-   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
+ 
  
  
 
