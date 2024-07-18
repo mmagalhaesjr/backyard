@@ -1,7 +1,13 @@
 
 
 import styled from "styled-components";
-import {  branco, cinza } from '../../Constants/cores';
+import {  azul, branco } from '../../Constants/cores';
+
+import foto from '../../assets/musicas/fundoJogo.png'
+
+
+
+const foto1 = `url(${foto})`;
 
 export const StyledJogo2 = styled.section`
   width: 100%;
@@ -13,7 +19,12 @@ export const StyledJogo2 = styled.section`
   #container {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: ${azul};
+    background-image: ${foto1};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 10%;
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -36,7 +47,7 @@ export const StyledJogo2 = styled.section`
   .musica{
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 47% 57% 35% 60%;
     
     border: solid 2px ${props => 
     props.musicaIgual === true ? '#33ff00' :
@@ -61,8 +72,8 @@ export const StyledJogo2 = styled.section`
   .titulo,
   .msg {
     width: 90%;
-    height: 20%;
-    max-width: 400px;
+    height: 400px;
+    max-width: 500px;
   }
 
   .espaco {
@@ -70,8 +81,13 @@ export const StyledJogo2 = styled.section`
     height: 20%;
     height: 150px;
     margin-top: 50px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-
+ 
  
 
   form {
@@ -91,7 +107,7 @@ export const StyledJogo2 = styled.section`
     margin-top: 10px;
     outline: none;
     padding-left: 5px;
-    background-color: #000000;
+    background-color: #ffffff;
     outline: none;
     font-size: 1rem;
 
@@ -108,10 +124,10 @@ export const StyledJogo2 = styled.section`
     transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
     
 
-    color:#ffffff;
+    color:#000000;
    
     &::placeholder {
-      color: #ffffff;
+      color: #6c6868;
       text-align: center;
     
     }
@@ -124,7 +140,7 @@ export const StyledJogo2 = styled.section`
     margin-top: 10px;
     box-shadow: 0px 10px 14px -7px #000000;
     border: none;
-    background-color: ${cinza};
+    background-color: #ffffff;
     font-size: 1rem;
     color: #000000;
     font-weight: 700;

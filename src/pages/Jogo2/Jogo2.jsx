@@ -10,6 +10,7 @@ import titulo from "../../assets/musicas/titulo.png";
 import ganhou from '../../assets/musicas/ganhou.png';
 import perdeu from '../../assets/musicas/perdeu.png';
 import confete from '../../assets/musicas/confete.gif';
+import by from '../../assets/musicas/by.png'
 
 import { CiPlay1 } from "react-icons/ci";
 import { CiPause1 } from "react-icons/ci";
@@ -75,12 +76,12 @@ export default function Jogo2() {
     };
 
 
-    const reiniciarPagina = () => {
-        window.location.reload();
-    };
+    // const reiniciarPagina = () => {
+    //     window.location.reload();
+    // };
 
 
-
+console.log(musicaSelecionada)
 
     return (
         <StyledJogo2 musicaIgual={musicaIgual}>
@@ -108,7 +109,7 @@ export default function Jogo2() {
 
                         <div className="cxBotao">
                             <button onClick={verificaNomesMusica} type="submit" className="enviar">Enviar</button>
-                            <button onClick={reiniciarPagina} className="enviar">Reiniciar</button>
+                            {/* <button onClick={reiniciarPagina} className="enviar">Reiniciar</button> */}
                         </div>
 
                     </form>
@@ -122,7 +123,9 @@ export default function Jogo2() {
                 ) : musicaIgual === false ? (
                     <img className="msg" src={perdeu} alt="img" />
                 ) : (
-                    <div className="espaco"> </div>
+                    <div className="espaco"> 
+                        <img src={by} alt="logo" />
+                    </div>
                 )}
             </div>
         </StyledJogo2>
