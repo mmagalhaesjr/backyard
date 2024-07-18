@@ -47,7 +47,7 @@ export const StyledJogo2 = styled.section`
   .musica{
     width: 100px;
     height: 100px;
-    border-radius: 47% 57% 35% 60%;
+    border-radius: 30% 57% 35% 60%;
     
     border: solid 2px ${props => 
     props.musicaIgual === true ? '#33ff00' :
@@ -66,6 +66,7 @@ export const StyledJogo2 = styled.section`
   .play,.pause{
     color: #ffffff;
     font-size: 3rem;
+    z-index: 2;
   }
   
 
@@ -152,13 +153,14 @@ export const StyledJogo2 = styled.section`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    z-index: 10;
+    z-index: 2;
   }
 
   .confete {
     position: absolute;
     top: 0;
     display: none;
+    z-index: 1;
   }
 
 
