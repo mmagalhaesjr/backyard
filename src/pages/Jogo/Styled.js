@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import foto1 from '../../../assets/musicas/fundoJogo.png';
-import foto2 from '../../../assets/musicas/botao.png';
-import { bege } from "@/Components/constants/constants";
-
-
+import foto1 from '../../assets/musicas/fundoJogo.png';
+import foto2 from '../../assets/musicas/botao.png';
+import { bege } from "../../Constants/cores";
 
 export const StyledJogo = styled.section`
   width: 100%;
@@ -16,10 +14,9 @@ export const StyledJogo = styled.section`
   #container {
     width: 100%;
     max-width: 600px;
-    /* border-radius: 20px; */
     height: 100%;
     background-color: #1859c1;
-    background-image: url(${foto1.src});
+    background-image: url(${foto1});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 80% 10%;
@@ -40,40 +37,36 @@ export const StyledJogo = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
   }
 
   .musica {
-    width:200px;
+    width: 200px;
     height: 130px;
     position: relative;
     cursor: pointer;
-   
-    background-image: url(${foto2.src});
+    background-image: url(${foto2});
     background-repeat: no-repeat;
     background-size: 100%;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   .play, .pause {
     color: #1859c1;
-    
     font-size: 4rem;
     z-index: 2;
     position: absolute;
     top: 40px;
   }
 
-  .titulo{
+  .titulo {
     width: 100%;
     margin-top: 100px;
   }
 
-   .msg, .espaco {
+  .msg, .espaco {
     width: 100%;
     height: 400px;
     max-width: 500px;
@@ -105,7 +98,6 @@ export const StyledJogo = styled.section`
     outline: none;
     transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
     color: #000000;
-    
 
     &::placeholder {
       color: #6c6868;

@@ -1,6 +1,6 @@
 
-import AFRICA from '@/assets/musicas/ListaMusica/AFRICA.mp3'
-import ANDARCOMFE from '@/assets/musicas/ListaMusica/ANDARCOMFE.mp3'
+import AFRICA from '../../assets/musicas/ListaMusica/AFRICA.mp3'
+import ANDARCOMFE from '../../assets/musicas/ListaMusica/ANDARCOMFE.mp3'
 
 export const ListaMusicas = [
     

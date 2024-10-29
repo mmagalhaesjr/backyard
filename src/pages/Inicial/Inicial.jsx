@@ -5,7 +5,7 @@ import InicioRodape from '../../Components/InicioRodape/page';
 
 
 
-export default function Home() {
+export default function Inicial() {
   return (
     <>
       <InicioCapa />

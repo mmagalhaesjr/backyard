@@ -31,7 +31,7 @@ export const StyledHeader = styled.section`
 
 
   #logo2{
-    width: 100%;
+    width: 900px;
     height: 20px;
     opacity: 0;
     cursor: pointer;
@@ -117,7 +117,6 @@ export const StyledHeader = styled.section`
       height: 60px;
       opacity: 1;
       transition: 1s;
-      position: absolute;
     }
    
   }
@@ -238,7 +237,6 @@ ${({ mobile }) =>
       height: 40px;
       opacity: 1;
       transition: 1s;
-      position: absolute;
     }
 
   }

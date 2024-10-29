@@ -1,21 +1,21 @@
-"use client";
 import { useRef, useState } from "react";
+import { ListaMusicas } from "../../Components/Listas/musicas";
 
-import { ListaMusicas } from "@/Components/Listas/musicas";
+import { useParams } from "react-router-dom";
 
-import titulo from "@/assets/musicas/titulo.png";
-import ganhou from '@/assets/musicas/ganhou.png';
-import perdeu from '@/assets/musicas/perdeu.png';
-import confete from '@/assets/musicas/confete.gif';
-import botao from '@/assets/musicas/botao.png';
-import by from '@/assets/musicas/by.png';
+import titulo from "../../assets/musicas/titulo.png";
+import ganhou from '../../assets/musicas/ganhou.png';
+import perdeu from '../../assets/musicas/perdeu.png';
+import confete from '../../assets/musicas/confete.gif';
+// import botao from '../../assets/musicas/botao.png';
+import by from '../../assets/musicas/by.png';
 
-
-import { CiPlay1 } from "react-icons/ci";
-import { CiPause1 } from "react-icons/ci";
+import { CiPlay1, CiPause1 } from "react-icons/ci";
 import { StyledJogo } from "./Styled";
 
-// Função para normalizar strings: remover acentos, pontuação e converter para minúsculas
+
+
+
 const padraoString = (str) => {
     return str
         .normalize("NFD")
@@ -25,11 +25,8 @@ const padraoString = (str) => {
         .toLowerCase();                  // Converte para minúsculas
 };
 
-export default function Jogo(props) {
-   
-    const musicaId = props.params.id
- 
-
+export default function Jogo() {
+    const { musicaId } = useParams();
     const [musicainput, setMusicainput] = useState('');
     const [musicaIgual, setMusicaIgual] = useState(null);
     const audioRef = useRef(null);
@@ -39,7 +36,7 @@ export default function Jogo(props) {
         setMusicainput(event.target.value);
     }
 
-    const musicaSelecionada = ListaMusicas.find(obj => obj.id == Number(musicaId));
+    const musicaSelecionada = ListaMusicas.find(obj => obj.id === Number(musicaId));
 
     function verificaNomesMusica(event) {
         event.preventDefault();
@@ -47,9 +44,11 @@ export default function Jogo(props) {
         const nomeInput = padraoString(musicainput);
         const nomeMusicaLista = padraoString(musicaSelecionada?.nome || "");
 
-        if (nomeInput === nomeMusicaLista || nomeInput == 'marcos magalhaes junior') {
+        if (nomeInput === nomeMusicaLista) {
             setMusicaIgual(true);
-        } else {
+        } else if(nomeInput == 'marcosdev'){
+            alert(nomeMusicaLista)
+        }else {
             setMusicaIgual(false);
         }
     }
@@ -64,9 +63,9 @@ export default function Jogo(props) {
     };
 
     return (
-        <StyledJogo >
+        <StyledJogo>
             <div id="container">
-                <img className="titulo" src={titulo.src} alt="img" />
+                <img className="titulo" src={titulo} alt="img" />
 
                 <div id="cxPlayer">
                     <div className="musica" onClick={togglePlayPause}>
@@ -84,14 +83,14 @@ export default function Jogo(props) {
 
                 {musicaIgual === true ? (
                     <>
-                        <img className="msg" src={ganhou.src} alt="img" />
-                        <img className="confete" src={confete.src} alt="gif" style={{ display: 'block' }} />
+                        <img className="msg" src={ganhou} alt="img" />
+                        <img className="confete" src={confete} alt="gif" style={{ display: 'block' }} />
                     </>
                 ) : musicaIgual === false ? (
-                    <img className="msg" src={perdeu.src} alt="img" />
+                    <img className="msg" src={perdeu} alt="img" />
                 ) : (
                     <div className="espaco"> 
-                        <img src={by.src} alt="logo" />
+                        <img src={by} alt="logo" />
                     </div>
                 )}
             </div>
