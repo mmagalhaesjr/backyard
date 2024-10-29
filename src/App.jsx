@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Jogo from './pages/Jogo/Jogo';
-import Jogo2 from './pages/Jogo2/Jogo2';
+
+
+import Inicial from './pages/Inicial/page.jsx';
 
 
 function App() {
@@ -11,11 +11,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" exact element={<Home />} />
-
-          <Route path="/jogo" exact element={<Jogo />} />
-          <Route path="/jogo2/:musicaId" exact element={<Jogo2 />} />
-
+          <Route path="/" exact element={<Inicial />} />
         </Routes>
 
       </Router>
