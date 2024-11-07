@@ -16,6 +16,7 @@ export const StyledJogo = styled.section`
     max-width: 600px;
     height: 100%;
     background-color: #1859c1;
+    background-color: #0f326a;
     background-image: url(${foto1});
     background-repeat: no-repeat;
     background-size: cover;

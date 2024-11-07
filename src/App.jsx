@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-import Inicial from './pages/Inicial/Inicial.jsx'
-import Jogo from './pages/Jogo/Jogo.jsx';
+import Inicial from './Pages/Inicial/Inicial.jsx'
+import Jogo from './Pages/Jogo/Jogo.jsx';
 
 
 

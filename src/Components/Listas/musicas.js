@@ -1,6 +1,6 @@
 
-import africa from '../../assets/musicas/ListaMusica/AFRICA.mp3'
-import andarcomfe from '../../assets/musicas/ListaMusica/ANDARCOMFE.mp3'
+import africa from '../../assets/musicas/ListaMusica/africa.mp3'
+import andarcomfe from '../../assets/musicas/ListaMusica/andarcomfe.mp3'
 import asuamaneira from '../../assets/musicas/ListaMusica/asuamaneira.mp3'
 import baba  from '../../assets/musicas/ListaMusica/baba.mp3'
 import billiejean  from '../../assets/musicas/ListaMusica/billiejean.mp3'
