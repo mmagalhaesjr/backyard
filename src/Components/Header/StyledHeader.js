@@ -12,7 +12,8 @@ export const StyledHeader = styled.section`
   border: none;
 
   position: fixed;
-  top: 0;background-color: transparent;
+  top: 0;
+  background-color: transparent;
   z-index: 9;
 
   display: flex; 

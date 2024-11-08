@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 
 import MenuMobile from "../MenuMobile/MenuMobile";
@@ -56,9 +54,9 @@ export default function Header() {
 
         <div className="cxNavegacaoEs">
           <div className="navegacao">
-            <Link to={"/Sobre"}><p>SOBRE</p></Link>
-            <Link to={"/Menu"}> <p>MENU</p></Link>
-            <Link to={"/Eventos"}> <p>EVENTOS</p></Link>
+            <Link to={"/sobrenos"}><p>SOBRE</p></Link>
+            <Link to={"/menu"}> <p>MENU</p></Link>
+            <Link to={"/eventos"}> <p>EVENTOS</p></Link>
           </div>
         </div>
 
