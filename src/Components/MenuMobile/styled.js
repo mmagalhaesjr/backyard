@@ -81,6 +81,7 @@ export const StyledMenuMobile = styled.div`
       transition: 0.7s;
       transform: translateX(0);
       color: #ffffff;
+      background-color: #000000;
 
       nav {
         transform: scale(1);

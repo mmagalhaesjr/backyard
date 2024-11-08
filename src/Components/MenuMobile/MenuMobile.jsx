@@ -7,27 +7,28 @@ import { Link } from "react-router-dom";
 
 
 
-export default function MenuMobile({ mobileAtivado, setMobileAtivado }) {
-
-
-  return (
-    <StyledMenuMobile mobile={mobileAtivado}>
-      <nav className="nav-lista">
-            <Link to={"/sobrenos"}>SOBRE</Link>
-            <Link to={"/menu"}> MENU</Link>
-            <Link to={"/eventos"}>EVENTOS</Link>
-            <Link to={"/"}>HOME</Link>
-
-        <div id="cxicones">
-          <a onClick={() => '#'}>
-            <div className="circuloIcone"><FaInstagram className="icone" /></div>
-          </a>
-          <a onClick={() => '#'}>
-            <div className="circuloIcone"><FaWhatsapp className="icone" /></div>
-          </a>
-        </div>
-
-      </nav>
-    </StyledMenuMobile>
-  );
-}
+export default function MenuMobile({ mobileAtivado }) {
+    return (
+      <StyledMenuMobile mobile={mobileAtivado ? "true" : undefined}>
+        <nav className="nav-lista">
+          <Link to={"/sobrenos"}>SOBRE</Link>
+          <Link to={"/menu"}>MENU</Link>
+          <Link to={"/eventos"}>EVENTOS</Link>
+          <Link to={"/"}>HOME</Link>
+  
+          <div id="cxicones">
+            <a href="#">
+              <div className="circuloIcone">
+                <FaInstagram className="icone" />
+              </div>
+            </a>
+            <a href="#">
+              <div className="circuloIcone">
+                <FaWhatsapp className="icone" />
+              </div>
+            </a>
+          </div>
+        </nav>
+      </StyledMenuMobile>
+    );
+  }

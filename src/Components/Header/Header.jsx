@@ -27,7 +27,7 @@ export default function Header() {
     };
   }, []);
 
-  function mobile() {
+  function ativaMenuMobile() {
     setMobileAtivado(!mobileAtivado);
 
     if (!mobileAtivado) {
@@ -43,11 +43,11 @@ export default function Header() {
 
   return (
     <>
-      <MenuMobile mobileAtivado={mobileAtivado} setMobileAtivado={setMobileAtivado} />
+      <MenuMobile mobileAtivado={mobileAtivado} />
 
-      <StyledHeader className={scrollY > 50 ? 'rolagem' : ''} mobile={mobileAtivado}>
+      <StyledHeader className={scrollY > 50 ? 'rolagem' : ''} mobile={mobileAtivado ? "true" : undefined}>
         
-        <button onClick={mobile}>
+        <button onClick={ativaMenuMobile}>
           <span className='linha'></span>
           <span className='linha'></span>
           <span className='linha'></span>
