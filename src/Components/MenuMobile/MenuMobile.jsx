@@ -6,15 +6,17 @@ import { Link } from "react-router-dom";
 
 
 
+
 export default function MenuMobile({ mobileAtivado, setMobileAtivado }) {
 
 
   return (
     <StyledMenuMobile mobile={mobileAtivado}>
       <nav className="nav-lista">
-        <Link href="/Sobre" >SOBRE</Link>
-        <Link href="/Sobre" >MENU</Link>
-        <Link href="/Sobre" >EVENTOS</Link>
+            <Link to={"/sobrenos"}>SOBRE</Link>
+            <Link to={"/menu"}> MENU</Link>
+            <Link to={"/eventos"}>EVENTOS</Link>
+            <Link to={"/"}>HOME</Link>
 
         <div id="cxicones">
           <a onClick={() => '#'}>

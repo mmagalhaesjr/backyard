@@ -24,6 +24,7 @@ export const StyledHeader2 = styled.header`
     display: flex; 
     align-items: center;
     justify-content: left;
+    border: solid 2px #ff0000;
   }
   .cxNavegacaoDr{
     width: 50%;
@@ -32,6 +33,7 @@ export const StyledHeader2 = styled.header`
     display: flex; 
     align-items: center;
     justify-content: right;
+    border: solid 2px #ff0000;
   }
 
   .navegacao{
@@ -57,53 +59,63 @@ export const StyledHeader2 = styled.header`
     color: #ffffff;
   }
 
-  /* Transformações ao clicar no botão */
-${({ mobile }) =>
+  #logo2{
+    width: 100px;
+    height: 70px;
+  }
+
+  button{
+    display: none;
+  }
+
+  
+  ${({ mobile }) =>
         mobile &&
         css`
       .linha:nth-child(1) {
         transform: translateY(20px) rotate(45deg);
-       
       }
 
       .linha:nth-child(2) {
         opacity: 0;
-        transition: opacity 0.05s ease-in-out; /* Transição rápida */
       }
 
       .linha:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
-
       }
     `}
 
 
     @media (max-width:900px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
     .cxNavegacaoEs, .cxNavegacaoDr{
         display: none;
       }
 
-  button{
-    height: 100px;
-    opacity: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-top: -50px;
-    z-index: 9;
-  }
- .linha{
-    position: relative;
-    width: 40px;
-    height: 5px;
-    background-color:#ffffff;
-    display:block;
-    margin: 10px auto;
-    transform-origin:center;
- }
+      button{
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        border: none;
 
- 
- 
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+      }
+      .linha {
+        position: relative;
+        width: 40px;
+        height: 5px;
+        background-color: #000000;
+        display: block;
+        transform-origin: center;
+        transition: transform 1s, opacity 0.3s;
+        margin: 5px auto;
+  }
 
 
   }

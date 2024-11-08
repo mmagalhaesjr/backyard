@@ -46,6 +46,7 @@ export default function Header() {
       <MenuMobile mobileAtivado={mobileAtivado} setMobileAtivado={setMobileAtivado} />
 
       <StyledHeader className={scrollY > 50 ? 'rolagem' : ''} mobile={mobileAtivado}>
+        
         <button onClick={mobile}>
           <span className='linha'></span>
           <span className='linha'></span>

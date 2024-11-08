@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 
-import { verde , bege } from "../constants/constants";
+import { verde, bege } from "../constants/constants";
 
 
 
@@ -10,6 +10,7 @@ export const StyledHeader = styled.section`
   height: 100vh;
   position: relative;
   border: none;
+ 
 
   position: fixed;
   top: 0;
@@ -28,9 +29,6 @@ export const StyledHeader = styled.section`
     opacity: 1;
     position: absolute;
   }
-
-
-
   #logo2{
     width: 900px;
     height: 20px;
@@ -89,7 +87,31 @@ export const StyledHeader = styled.section`
     color: #ffffff;
   }
 
+  button{
+    display: none;
+  }
 
+
+  @media (max-width:900px) {
+    #logo1{
+    width: 90%;
+    opacity: 1;
+    position: absolute;
+    
+    }
+    #logo2{
+    width: 500px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+    }
+  }
+
+
+
+ 
+
+//rolagem com a tela grande.
   &.rolagem {
     /* cabeçalho */
       height: 100px;
@@ -119,13 +141,16 @@ export const StyledHeader = styled.section`
       opacity: 1;
       transition: 1s;
     }
-   
   }
 
-/* Transformações ao clicar no botão */
+
+
+
+
+
 ${({ mobile }) =>
-    mobile &&
-    css`
+        mobile &&
+        css`
       .linha:nth-child(1) {
         transform: translateY(20px) rotate(45deg);
        
@@ -133,7 +158,7 @@ ${({ mobile }) =>
 
       .linha:nth-child(2) {
         opacity: 0;
-        transition: opacity 0.05s ease-in-out; /* Transição rápida */
+        transition: opacity 0.05s ease-in-out; 
       }
 
       .linha:nth-child(3) {
@@ -147,101 +172,74 @@ ${({ mobile }) =>
 
 
 
-/* ------------------------------------------------------- */
-  @media (max-width:900px) {
+    @media (max-width:900px) {
+    height:50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+
     .cxNavegacaoEs, .cxNavegacaoDr{
         display: none;
       }
 
-  button{
-    height: 100px;
-    opacity: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-top: -50px;
-    z-index: 9;
-  }
- .linha{
-    position: relative;
-    width: 40px;
-    height: 5px;
-    background-color:#ffffff;
-    display:block;
-    margin: 10px auto;
-    transform-origin:center;
- }
-
- 
- &.rolagem {
-  button{
+      
+//rolagem com a tem 900 -
+  &.rolagem {
+    
     height: 100px;
     opacity: 1;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-top: -50px;
-    z-index: 9;
+    background-color: ${bege};
+    transition: 1s;
+      
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #eeeed5;
+
+    button{
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        border: none;
+
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+      }
+      .linha {
+        position: relative;
+        width: 40px;
+        height: 5px;
+        background-color: #000000;
+        display: block;
+        transform-origin: center;
+        transition: transform 1s, opacity 0.3s;
+        margin: 5px auto;
+  }
+
+  #logo1{
+    width: 100px;
+    opacity: 0;
+    transition: 1s;
     position: absolute;
-    left: 10px;
-    top: 50px;
-    transition:2s;
-  }
- .linha{
-    position: relative;
-    width: 40px;
-    height: 5px;
-    background-color:#000000;
-    display:block;
-    margin: 10px auto;
-    transform-origin:center;
-    transition:1s;
- }
- }
-
-
-  }
-
-
-
-
-  @media (max-width:600px) {
-    height: 500px;
-
-    #logo1{
-      width: 90%;
-      opacity: 1;
-      position: absolute;
-  }
-
-    #logo2{
-      width: 400px;
-      height: 10px;
-      opacity: 0;
-    }
-
-    &.rolagem {
-    /* cabeçalho */
-      height: 100px;
-      opacity: 1;
-      background-color: ${bege};
-      transition: 1s;
-
-    #logo1{
-      width: 100px;
-      opacity: 0;
-      transition: 1s;
-      position: absolute;
+    right:30px;
     }
     #logo2{
-      width: 80px;
-      height: 40px;
-      opacity: 1;
-      transition: 1s;
+    width: 100px;
+    height: 70px;
+    opacity: 1;
+    transition: 1s;
     }
+  }
+
 
   }
-}
-`;
 
 
+
+
+
+`
