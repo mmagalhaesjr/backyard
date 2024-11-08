@@ -4,23 +4,25 @@ import MenuMobile from "../MenuMobile/MenuMobile";
 import logo2 from "../../assets/imgagens/inicio/by.png";
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header2() {
   const [mobileAtivado, setMobileAtivado] = useState(false);
+  const navigate = useNavigate();
 
   function ativaMenuMobile() {
     setMobileAtivado(!mobileAtivado);
 
-   
-    
     if (mobileAtivado) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
+  }
 
-   
+  function paginaInicial(){
+    navigate('/')
+    setMobileAtivado(false)
   }
 
   return (
@@ -48,9 +50,9 @@ export default function Header2() {
           </div>
         </div>
 
-        <Link to={"/"}>
-          <img id="logo2" src={logo2} alt="logo" />
-        </Link>
+        
+          <img onClick={paginaInicial} id="logo2" src={logo2} alt="logo" />
+      
 
         <div className="cxNavegacaoDr">
           <div className="navegacao">
