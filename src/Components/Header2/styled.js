@@ -66,6 +66,7 @@ export const StyledHeader2 = styled.header`
 
   button{
     display: none;
+    
   }
 
   

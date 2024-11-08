@@ -12,12 +12,15 @@ export default function Header2() {
   function ativaMenuMobile() {
     setMobileAtivado(!mobileAtivado);
 
+   
     
-    if (!mobileAtivado) {
+    if (mobileAtivado) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
+
+   
   }
 
   return (
