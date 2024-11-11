@@ -11,66 +11,68 @@ import { StyledHeader } from "./StyledHeader";
 
 
 
+
 export default function Header() {
-  const [scrollY, setScrollY] = useState(0);
-  const [mobileAtivado, setMobileAtivado] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+    const [mobileAtivado, setMobileAtivado] = useState(false);
 
 
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+        setScrollY(window.scrollY);
     };
-  }, []);
 
-  function ativaMenuMobile() {
-    setMobileAtivado(!mobileAtivado);
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
-    if (!mobileAtivado) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
+    function ativaMenuMobile() {
+        setMobileAtivado(!mobileAtivado);
+
+
+        if (!mobileAtivado) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     }
-  }
 
 
 
 
 
-  return (
-    <>
-      <MenuMobile mobileAtivado={mobileAtivado} />
+    return (
+        <>
+            <MenuMobile mobileAtivado={mobileAtivado} />
 
-      <StyledHeader className={scrollY > 50 ? 'rolagem' : ''} mobile={mobileAtivado ? "true" : undefined}>
-        
-        <button onClick={ativaMenuMobile}>
-          <span className='linha'></span>
-          <span className='linha'></span>
-          <span className='linha'></span>
-        </button>
+            <StyledHeader className={scrollY > 50 ? 'rolagem' : ''} mobile={mobileAtivado ? "true" : undefined}>
 
-        <div className="cxNavegacaoEs">
-          <div className="navegacao">
-            <Link to={"/sobrenos"}><p>SOBRE</p></Link>
-            <Link to={"/menu"}> <p>MENU</p></Link>
-            <Link to={"/eventos"}> <p>EVENTOS</p></Link>
-          </div>
-        </div>
+                <button onClick={ativaMenuMobile}>
+                    <span className='linha'></span>
+                    <span className='linha'></span>
+                    <span className='linha'></span>
+                </button>
 
-        <img id='logo1' src={logo} alt="logo" />
-       <Link to={'/'}><img  id='logo2' src={logo2} alt="logo" /></Link> 
+                <div className="cxNavegacaoEs">
+                    <div className="navegacao">
+                        <Link to={"/sobrenos"}><p>SOBRE</p></Link>
+                        <Link to={"/menu"}> <p>MENU</p></Link>
+                        <Link to={"/eventos"}> <p>EVENTOS</p></Link>
+                    </div>
+                </div>
 
-        <div className="cxNavegacaoDr">
-          <div className="navegacao">
-            <div className="circuloIcone"><FaInstagram className="icone" /></div>
-            <div className="circuloIcone"><FaWhatsapp className="icone" /></div>
-          </div>
-        </div>
-      </StyledHeader>
-    </>
-  );
+                <img id='logo1' src={logo} alt="logo" />
+                <Link to={'/'}><img id='logo2' src={logo2} alt="logo" /></Link>
+
+                <div className="cxNavegacaoDr">
+                    <div className="navegacao">
+                        <div className="circuloIcone"><FaInstagram className="icone" /></div>
+                        <div className="circuloIcone"><FaWhatsapp className="icone" /></div>
+                    </div>
+                </div>
+            </StyledHeader>
+        </>
+    );
 }

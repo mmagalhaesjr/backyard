@@ -12,7 +12,7 @@ export default function MenuMobile({ mobileAtivado }) {
 
 
     return (
-      <StyledMenuMobile mobile={mobileAtivado ? "true" : undefined}>
+      <StyledMenuMobile mobile={mobileAtivado ? "true" : "false"}>
         <nav className="nav-lista">
           <Link to={"/sobrenos"}>SOBRE</Link>
           <Link to={"/menu"}>MENU</Link>

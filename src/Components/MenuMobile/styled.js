@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import  { css } from 'styled-components';
 import { verde } from '../constants/constants';
 
 
@@ -11,10 +10,16 @@ export const StyledMenuMobile = styled.div`
   height: calc(50vh - 100px);
   background-color: #000000;
   z-index: 999; 
-  opacity: 0;
+ 
   pointer-events: none;
   transition: 0.5s;
   color: #ffffff;
+opacity: ${(props) => (props.mobile === 'true' ? 1 : 0)};
+    pointer-events: auto;
+    transition: 0.7s;
+    transform: translateX(0);
+
+  
 
   .nav-lista {
     text-align: center;
@@ -26,7 +31,7 @@ export const StyledMenuMobile = styled.div`
     height: 100%;
     color: #ffffff;
     flex-direction: column;
-    transform: scale(0);
+    transform: scale(1);
     transition: 1s;
     
     gap: 1rem;
@@ -73,18 +78,4 @@ export const StyledMenuMobile = styled.div`
     color: #000000;
   }
 
-  ${({ mobile }) =>
-    mobile &&
-    css`
-      opacity: 1;
-      pointer-events: auto;
-      transition: 0.7s;
-      transform: translateX(0);
-      color: #ffffff;
-      background-color: #000000;
-
-      nav {
-        transform: scale(1);
-      }
-    `}
 `;
