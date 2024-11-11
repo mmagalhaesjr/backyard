@@ -14,13 +14,12 @@ export const StyledMenuMobile = styled.div`
   pointer-events: none;
   transition: 0.5s;
   color: #ffffff;
-opacity: ${(props) => (props.mobile === 'true' ? 1 : 0)};
+  
+    opacity: ${(props) => (props.mobile === 'true' ? 1 : 0)};
     pointer-events: auto;
     transition: 0.7s;
     transform: translateX(0);
-
-  
-
+    
   .nav-lista {
     text-align: center;
     color: #ffffff;

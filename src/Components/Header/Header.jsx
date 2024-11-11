@@ -6,7 +6,7 @@ import logo from '../../assets/imgagens/inicio/backyard.png';
 import logo2 from '../../assets/imgagens/inicio/by.png';
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { StyledHeader } from "./StyledHeader";
 
 
@@ -28,9 +28,10 @@ export default function Header() {
         };
     }, []);
 
+
+
     function ativaMenuMobile() {
         setMobileAtivado(!mobileAtivado);
-
 
         if (!mobileAtivado) {
             document.body.style.overflow = 'hidden';
@@ -39,13 +40,16 @@ export default function Header() {
         }
     }
 
-
+    function paginaInicial(){
+        Navigate('/')
+        setMobileAtivado(false)
+      }
 
 
 
     return (
         <>
-            <MenuMobile mobileAtivado={mobileAtivado} />
+            <MenuMobile ativaMenuMobile={ativaMenuMobile}  mobileAtivado={mobileAtivado} />
 
             <StyledHeader className={scrollY > 50 ? 'rolagem' : ''} mobile={mobileAtivado ? "true" : undefined}>
 
@@ -64,7 +68,7 @@ export default function Header() {
                 </div>
 
                 <img id='logo1' src={logo} alt="logo" />
-                <Link to={'/'}><img id='logo2' src={logo2} alt="logo" /></Link>
+                <Link onClick={paginaInicial} to={'/'}><img id='logo2' src={logo2} alt="logo" /></Link>
 
                 <div className="cxNavegacaoDr">
                     <div className="navegacao">

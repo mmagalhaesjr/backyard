@@ -8,16 +8,17 @@ import { Link } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
-export default function MenuMobile({ mobileAtivado }) {
+export default function MenuMobile({ mobileAtivado, ativaMenuMobile }) {
 
+console.log(mobileAtivado)
 
     return (
       <StyledMenuMobile mobile={mobileAtivado ? "true" : "false"}>
         <nav className="nav-lista">
-          <Link to={"/sobrenos"}>SOBRE</Link>
-          <Link to={"/menu"}>MENU</Link>
-          <Link to={"/eventos"}>EVENTOS</Link>
-          <Link to={"/"}>HOME</Link>
+          <Link onClick={ativaMenuMobile} to={"/sobrenos"}>SOBRE NÓS</Link>
+          <Link onClick={ativaMenuMobile} to={"/menu"}>MENU</Link>
+          <Link onClick={ativaMenuMobile} to={"/eventos"}>EVENTOS</Link>
+          <Link onClick={ativaMenuMobile} to={"/"}>HOME</Link>
   
           <div id="cxicones">
             <a href="#">
