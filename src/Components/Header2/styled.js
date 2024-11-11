@@ -63,6 +63,7 @@ export const StyledHeader2 = styled.header`
   #logo2{
     width: 100px;
     height: 70px;
+    cursor: pointer;
   }
 
   button{
