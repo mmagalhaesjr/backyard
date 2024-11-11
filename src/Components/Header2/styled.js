@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { bege } from "../constants/constants";
 
 
 
@@ -9,8 +10,10 @@ export const StyledHeader2 = styled.header`
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #eeeed5;
+    background-color: ${bege};
     position:fixed;
     top:0;
+    z-index: 99;
 
     display: flex;
     align-items: center;
@@ -24,7 +27,6 @@ export const StyledHeader2 = styled.header`
     display: flex; 
     align-items: center;
     justify-content: left;
-    border: solid 2px #ff0000;
   }
   .cxNavegacaoDr{
     width: 50%;
@@ -33,7 +35,6 @@ export const StyledHeader2 = styled.header`
     display: flex; 
     align-items: center;
     justify-content: right;
-    border: solid 2px #ff0000;
   }
 
   .navegacao{
