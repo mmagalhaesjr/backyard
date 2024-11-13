@@ -41,13 +41,14 @@ export const StyledJogo = styled.section`
   }
 
   .musica {
-    width: 200px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     position: relative;
     cursor: pointer;
     background-image: url(${foto2});
     background-repeat: no-repeat;
     background-size: 100%;
+   
 
     display: flex;
     align-items: center;
@@ -59,7 +60,8 @@ export const StyledJogo = styled.section`
     font-size: 4rem;
     z-index: 2;
     position: absolute;
-    top: 40px;
+    top: 20px;
+    right: 15px;
   }
 
   .titulo {
