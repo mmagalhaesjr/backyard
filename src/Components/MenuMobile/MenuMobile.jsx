@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 export default function MenuMobile({ mobileAtivado, ativaMenuMobile }) {
 
-console.log(mobileAtivado)
 
     return (
       <StyledMenuMobile mobile={mobileAtivado ? "true" : "false"}>

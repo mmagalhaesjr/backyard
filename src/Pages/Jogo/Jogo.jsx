@@ -18,7 +18,7 @@ import { StyledJogo } from "./Styled";
 
 const padraoString = (str) => {
     return str
-        .normalize("NFD")
+        .normalize("NFD")                // Decompõe caracteres acentuados
         .replace(/[\u0300-\u036f]/g, "") // Remove acentuação
         .replace(/[^\w\s]|_/g, "")       // Remove caracteres especiais, exceto espaços
         .replace(/\s+/g, "")             // Remove todos os espaços
