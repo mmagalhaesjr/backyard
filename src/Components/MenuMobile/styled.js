@@ -7,7 +7,7 @@ export const StyledMenuMobile = styled.div`
   position: fixed; 
   top: 100px; 
   width: 100%;
-  height: calc(50vh - 100px);
+  /* height: calc(50vh - 100px); */
   background-color: #000000;
   z-index: 999; 
  
