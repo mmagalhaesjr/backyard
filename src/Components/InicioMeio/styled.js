@@ -31,6 +31,8 @@ justify-content: center;
     bottom: 0;
 }
 
+
+
 @media (max-width:500px) {
 
     height: fit-content;

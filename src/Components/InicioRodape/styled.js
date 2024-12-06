@@ -1,5 +1,5 @@
 
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { bege } from "../constants/constants";
 
 
@@ -45,11 +45,10 @@ export const Styledpagina2 = styled.section`
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     flex-shrink: 0;
-    
   }
 
 
-  .botao {
+  .botao{
     width: 300px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -103,16 +102,16 @@ export const Styledpagina2 = styled.section`
   }
 
 @media (max-width:930px){
-.cxMeio img{
-  width:30%;
-}
+    .cxMeio img{
+        width:30%;
+    }
 }
 
 @media (max-width:600px) {
     height: 90vh;
-  .cxMeio img {
-    width:50%;
-  }
+    .cxMeio img {
+        width:50%;
+    }
 
   input {
     width: 300px;
@@ -264,7 +263,6 @@ export const StyledFinal = styled.section`
   ul{
     margin-left: 0;
   }
-
   .cxTexto p{
     font-size: .5em;
   }
