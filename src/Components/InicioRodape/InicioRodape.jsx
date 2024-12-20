@@ -56,7 +56,7 @@ export default function InicioRodape() {
                             <li>Alto dos Passos</li>
                             <li>Juiz de Fora/MG</li>
                             <li>36025-160</li>
-                            <li>Entrada pelo estacionamento do Mc Donald's.</li>
+                            <li>Entrada pelo estacionamento do Mc Donald&sbquo;s.</li>
                             <h2>ENDEREÇO</h2>
                         </Link>
                     </ul>
