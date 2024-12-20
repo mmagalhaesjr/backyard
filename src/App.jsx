@@ -23,7 +23,6 @@ export default function App() {
           <Route path="/menu" exact element={<Menu />} />
           <Route path="/eventos" exact element={<Eventos />} />
 
-        
           <Route path="/jogo/:musicaId" exact element={<Jogo />} />
         </Routes>
 
