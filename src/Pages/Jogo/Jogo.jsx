@@ -8,7 +8,7 @@ import ganhou from '../../assets/musicas/ganhou.png';
 import perdeu from '../../assets/musicas/perdeu.png';
 import confete from '../../assets/musicas/confete.gif';
 // import botao from '../../assets/musicas/botao.png';
-import by from '../../assets/musicas/by.png';
+import by from '../../assets/musicas/backyardBranco.png';
 
 import { CiPlay1, CiPause1 } from "react-icons/ci";
 import { StyledJogo } from "./Styled";

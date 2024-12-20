@@ -65,7 +65,7 @@ export const StyledJogo = styled.section`
   }
 
   .titulo {
-    width: 100%;
+    width: 95%;
     margin-top: 100px;
   }
 
@@ -77,6 +77,9 @@ export const StyledJogo = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .espaco img{
+    width: 80%;
   }
 
   form {
