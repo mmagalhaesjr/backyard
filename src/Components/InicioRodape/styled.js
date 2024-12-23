@@ -1,9 +1,5 @@
-
 import styled from "styled-components";
 import { bege } from "../constants/constants";
-
-
-
 
 
 export const Styledpagina2 = styled.section`
@@ -154,6 +150,7 @@ export const StyledFinal = styled.section`
     justify-content: center;
   }
   ul{
+    /* width: 50%; */
     margin-left: 40px;
     display: flex;
     flex-direction: column;
@@ -253,15 +250,23 @@ export const StyledFinal = styled.section`
   
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
     height: fit-content;
  
 .cxContatoEndereco{
-  width: 90%;
+  width: 95%;
   justify-content: space-between;
 }
   ul{
+    width: 50%;
+    height: 100%;
     margin-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: end;
+    list-style-type: none;
   }
   .cxTexto p{
     font-size: .5em;
