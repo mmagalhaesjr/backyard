@@ -47,7 +47,7 @@ export default function Jogo() {
 
         if (nomeInput === nomeMusicaLista) {
             setMusicaIgual(true);
-        } else if(nomeInput == 'marcosdev'){
+        } else if(nomeInput == 'marcos'){
             alert(musicaSelecionada.nome)
         }else {
             setMusicaIgual(false);
