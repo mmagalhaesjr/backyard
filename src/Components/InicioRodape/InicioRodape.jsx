@@ -15,8 +15,8 @@ import { Link } from "react-router-dom";
 
 export default function InicioRodape() {
 
-    // const whatsapp = "https://api.whatsapp.com/send?phone=32999158008"
-    const insta = "https://www.instagram.com/musicboxstudiobr?igsh=bTBlYXRxMzZyNG13"
+    // // const whatsapp = "https://api.whatsapp.com/send?phone=32999158008"
+    // const insta = "https://www.instagram.com/musicboxstudiobr?igsh=bTBlYXRxMzZyNG13"
 
     return (
         <Styledpagina2>
