@@ -46,6 +46,10 @@ export default function Header() {
       }
 
 
+       const whatsapp = "https://api.whatsapp.com/send?phone=32999158008"
+        const insta ="https://www.instagram.com/musicboxstudiobr?igsh=bTBlYXRxMzZyNG13"
+     
+
 
     return (
         <>
@@ -72,8 +76,8 @@ export default function Header() {
 
                 <div className="cxNavegacaoDr">
                     <div className="navegacao">
-                        <div className="circuloIcone"><FaInstagram className="icone" /></div>
-                        <div className="circuloIcone"><FaWhatsapp className="icone" /></div>
+                        <Link to={insta} target="_blank" rel="noreferrer" className="circuloIcone"><FaInstagram className="icone" /></Link>
+                        <Link to={whatsapp} target="_blank" rel="noreferrer" className="circuloIcone"><FaWhatsapp className="icone" /></Link>
                     </div>
                 </div>
             </StyledHeader>

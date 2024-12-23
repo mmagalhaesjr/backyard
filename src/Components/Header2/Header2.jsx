@@ -25,6 +25,9 @@ export default function Header2() {
     setMobileAtivado(false)
   }
 
+     const whatsapp = "https://api.whatsapp.com/send?phone=32999158008"
+        const insta ="https://www.instagram.com/musicboxstudiobr?igsh=bTBlYXRxMzZyNG13"
+
   return (
     <>
      <MenuMobile mobileAtivado={mobileAtivado} />
@@ -57,10 +60,10 @@ export default function Header2() {
         <div className="cxNavegacaoDr">
           <div className="navegacao">
             <div className="circuloIcone">
-              <FaInstagram className="icone" />
+            <Link to={insta} target="_blank" rel="noreferrer" className="circuloIcone"><FaInstagram className="icone" /></Link>
             </div>
             <div className="circuloIcone">
-              <FaWhatsapp className="icone" />
+            <Link to={whatsapp} target="_blank" rel="noreferrer" className="circuloIcone"><FaWhatsapp className="icone" /></Link>
             </div>
           </div>
         </div>
