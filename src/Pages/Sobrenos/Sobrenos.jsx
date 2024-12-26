@@ -5,8 +5,15 @@ import sobre from '../../assets/imgagens/sobre/sobre.png';
 import texto from '../../assets/imgagens/sobre/texto.png';
 import bar from '../../assets/imgagens/sobre/bar.png';
 import botao from '../../assets/imgagens/sobre/botao.png';
+import { useEffect } from "react";
 
 export default function Sobrenos() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
+
     return (
         <StyledSobrenos>
             <Header2 />

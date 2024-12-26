@@ -10,13 +10,49 @@ import texto3 from '../../assets/imgagens/rodape/texto3.png'
 import botao from '../../assets/imgagens/rodape/botao.png'
 import { Link } from "react-router-dom";
 
-
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
 
 
 export default function InicioRodape() {
 
+    const form = useRef();
+
     // // const whatsapp = "https://api.whatsapp.com/send?phone=32999158008"
     // const insta = "https://www.instagram.com/musicboxstudiobr?igsh=bTBlYXRxMzZyNG13"
+
+
+    const resumoMensagem = ` Olá, gostaria de fazer uma reserva:`
+
+    const reserva = encodeURIComponent(resumoMensagem);
+    const link = `https://wa.me/+5532999158008?text=${reserva}`;
+
+    function realizarReserva(e) {
+        e.preventDefault();
+        window.open(link, '_blank');
+    }
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        // Validação simples do campo de e-mail
+        const emailInput = form.current.email.value;
+        if (!emailInput) {
+            alert("Por favor, insira um e-mail válido.");
+            return;
+        }
+
+        emailjs.sendForm('gmailMessage', 'template_id', form.current, 'GTdfqJ8MQX3h_EIns')
+            .then((result) => {
+                alert('E-mail enviado com sucesso!');
+                console.log(result.text);
+            })
+            .catch((error) => {
+                alert('Houve um erro ao enviar o e-mail. Tente novamente mais tarde.');
+                console.error(error.text);
+            });
+        e.target.reset();
+    };
 
     return (
         <Styledpagina2>
@@ -26,20 +62,22 @@ export default function InicioRodape() {
                 <img className="texto" src={texto1} alt="img" />
             </div>
 
-            <img className="botao" src={botao} alt="img" />
+            <img className="botao" src={botao} alt="img" onClick={realizarReserva} />
 
             <div className="cxMeio">
                 <img className="texto" src={texto2} alt="img" />
                 <img className="texto" src={texto3} alt="img" />
             </div>
 
-            <form >
-                <label htmlFor="">E-mail</label>
-
+            <form ref={form} onSubmit={sendEmail}>
+                <label htmlFor="email">E-mail</label>
                 <div className="cxEmail">
-                    <input type="email" />
-                    <MdOutlineArrowRightAlt className="seta" />
+                    <input type="email" name="email" required placeholder="Digite seu e-mail" />
+                    <button type="submit">
+                        <MdOutlineArrowRightAlt className="seta" />
+                    </button>
                 </div>
+
             </form>
 
 
