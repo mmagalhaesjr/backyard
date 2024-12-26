@@ -23,6 +23,7 @@ export const StyledMenuMobile = styled.div`
   .nav-lista {
     text-align: center;
     color: #ffffff;
+   
   }
 
   nav {
@@ -35,7 +36,7 @@ export const StyledMenuMobile = styled.div`
     
     gap: 1rem;
 
-    display: flex;
+    display: none;
     align-items: start;
     justify-content: center;
   }
@@ -75,6 +76,23 @@ export const StyledMenuMobile = styled.div`
   .icone{
     font-size: 1.5rem;
     color: #000000;
+  }
+
+  @media(max-width:800px){
+    nav {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    flex-direction: column;
+    transform: scale(1);
+    transition: 1s;
+    
+    gap: 1rem;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
   }
 
 `;

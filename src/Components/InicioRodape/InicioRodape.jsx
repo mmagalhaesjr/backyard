@@ -22,7 +22,7 @@ export default function InicioRodape() {
     // const insta = "https://www.instagram.com/musicboxstudiobr?igsh=bTBlYXRxMzZyNG13"
 
 
-    const resumoMensagem = ` Olá, gostaria de fazer uma reserva:`
+    const resumoMensagem = ` Olá, gostaria de fazer uma reserva.`
 
     const reserva = encodeURIComponent(resumoMensagem);
     const link = `https://wa.me/+5532999158008?text=${reserva}`;
@@ -72,7 +72,7 @@ export default function InicioRodape() {
             <form ref={form} onSubmit={sendEmail}>
                 <label htmlFor="email">E-mail</label>
                 <div className="cxEmail">
-                    <input type="email" name="email" required placeholder="Digite seu e-mail" />
+                    <input type="email" name="email" required  />
                     <button type="submit">
                         <MdOutlineArrowRightAlt className="seta" />
                     </button>

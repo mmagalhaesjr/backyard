@@ -48,6 +48,8 @@ export const Styledpagina2 = styled.section`
     width: 300px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    z-index: 99;
+   
     &:hover {
         transform: scale(1.1);
     }

@@ -24,6 +24,8 @@ export const StyledHeader = styled.section`
   transition: opacity 4s ease-in-out, visibility 10s ease-in-out;
 
 
+
+
   #logo1{
     width: 90%;
     opacity: 1;
