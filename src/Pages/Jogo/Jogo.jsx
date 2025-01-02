@@ -15,7 +15,6 @@ import { StyledJogo } from "./Styled";
 
 
 
-
 const padraoString = (str) => {
     return str
         .normalize("NFD")                // Decompõe caracteres acentuados
