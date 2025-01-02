@@ -89,10 +89,14 @@ export const StyledMenuMobile = styled.div`
     
     gap: 1rem;
 
-    display: flex;
+    display:${(props) => (props.mobile === 'true' ? 'flex' : 'none')};
     align-items: start;
     justify-content: center;
   }
+  }
+
+  @media(max-width:800px){
+
   }
 
 `;
